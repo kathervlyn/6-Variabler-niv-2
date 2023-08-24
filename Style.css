@@ -1,0 +1,67 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#wholeColor {
+    width: 100%;
+    height: 100%;
+}
+
+.frameRed {
+    text-align: center;
+    font-size: x-large;
+    padding: 1% 0;
+    border: 1px solid Gray;
+    background-color: red;
+    width: 50%;
+    margin-left: 25%;
+    user-select: none;
+}
+
+.frameBlue {
+    text-align: center;
+    font-size: x-large;
+    padding: 1% 0;
+    border: 1px solid Gray;
+    background-color: Blue;
+    width: 50%;
+    margin-left: 25%;
+    ;
+    user-select: none;
+}
+
+.frameGreen {
+    text-align: center;
+    font-size: x-large;
+    padding: 1% 0;
+    border: 1px solid Gray;
+    background-color: Green;
+    width: 50%;
+    margin-left: 25%;
+    ;
+    user-select: none;
+}
+
+#wholeColor {
+    width: 100%;
+    height: 100%;
+}
+.box1{
+    border: dashed 1px darkslategray;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+}
+.box2{
+    border: dashed 1px darkslategray;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+}
+
+.boxActive{
+    border: solid 4px purple;
+    width: 40px;
+    height: 40px;
+}

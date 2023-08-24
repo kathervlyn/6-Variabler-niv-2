@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mer om variabler</title>
+    <link rel="Stylesheet" href="Style.css" />
+</head>
+
+<body>
+
+    <div class="frameRed" onclick="selectBackground('red')">Red</div>
+    <div class="frameGreen" onclick="selectBackground('green')">Green</div>
+    <div class="frameBlue" onclick="selectBackground('blue')">Blue</div>
+
+    <div class="box1" onclick="selectBox('b1')" id="b1"> </div><br>
+
+    <div class="box2" onclick="selectBox('b2')" id="b2"> </div><br>
+
+    <button onclick="changeBackground()">Background Color</button>
+
+
+    <script>
+        let chosenColor;
+        let activeBox;
+
+        function selectBackground(color) {
+            chosenColor = color;
+        }
+
+        function changeBackground() {
+            document.body.style.backgroundColor = chosenColor;
+        }
+
+        function selectBox(chosenBox) {
+            document.getElementById(chosenBox).style.backgroundColor = chosenColor;
+            document.getElementById(chosenBox).classList.remove('boxActive');
+
+            if (chosenBox == 'b1') {
+                if (activeBox == 'b2') {
+                    document.getElementById(activeBox).classList.remove('boxActive');
+                    document.getElementById(chosenBox).classList.add('boxActive');
+                }
+                else {
+                    document.getElementById(chosenBox).classList.add('boxActive');
+                }
+            }
+            else if (chosenBox == 'b2') {
+                if (activeBox == 'b1') {
+                    document.getElementById('b1').classList.remove('boxActive');
+                    document.getElementById('b2').classList.add('boxActive');
+                }
+                else {
+                    document.getElementById('b2').classlist.add('boxActive');
+                }
+            }
+            activeBox = chosenBox;
+        }
+    </script>
+</body>
+
+</html>
